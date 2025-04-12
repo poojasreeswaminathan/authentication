@@ -10,7 +10,7 @@ export const LoginRegister = ({ setUser }) => {
 
   return (
     <>
-      <label>
+      <div class="login"><label>
         Email:
         <input
           type="email"
@@ -53,8 +53,8 @@ export const LoginRegister = ({ setUser }) => {
       >
         Login
       </button>
-
-      <label>
+      </div>
+      <div class="register"><label>
         Name:
         <input
           type="text"
@@ -77,7 +77,7 @@ export const LoginRegister = ({ setUser }) => {
           value={registerPassword}
           onChange={(e) => setRegisterPassword(e.target.value)}
         />
-      </label>
+      </label></div>
       <button
         onClick={() => {
           fetch("/api/register", {

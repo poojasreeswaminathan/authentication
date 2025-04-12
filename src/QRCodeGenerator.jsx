@@ -32,24 +32,24 @@ export const QRCodeGenerator = ({ user, setUser }) => {
   };
 
   return (
-    <div>
-      <div
+    <div><div class="text">
+      <div 
         style={{
           display: "flex",
           justifyContent: "space-between",
           gap: "50px",
         }}
       >
-        <h3>Welcome {user.name}</h3>
+        <h3 class="aa">Welcome {user.name}</h3>
         <button
           onClick={() => {
             setUser(null);
           }}
         >
-          Logout
+        Logout
         </button>
       </div>
-      <div>
+      <div >
         <textarea
           type="text"
           value={text}
@@ -64,7 +64,7 @@ export const QRCodeGenerator = ({ user, setUser }) => {
         {loading ? (
           <div>Loading...</div>
         ) : !imageUrl ? (
-          <div>Enter Text & Click Submit</div>
+          <div class="bb">Enter Text & Click Submit</div>
         ) : (
           <div>
             <img src={imageUrl} />
@@ -81,6 +81,7 @@ export const QRCodeGenerator = ({ user, setUser }) => {
             </button>
           </div>
         )}
+      </div>
       </div>
     </div>
   );
